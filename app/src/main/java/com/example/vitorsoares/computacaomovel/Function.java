@@ -1,28 +1,28 @@
 package com.example.vitorsoares.computacaomovel;
 
-import android.os.AsyncTask;
-import android.util.Log;
 
-import org.json.JSONException;
-import org.json.JSONObject;
+        import android.os.AsyncTask;
+        import android.util.Log;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.text.DateFormat;
-import java.util.Date;
-import java.util.Locale;
+        import org.json.JSONException;
+        import org.json.JSONObject;
 
-/**
- * Created by vitorsoares on 04/01/2018.
- */
+        import java.io.BufferedReader;
+        import java.io.InputStreamReader;
+        import java.net.HttpURLConnection;
+        import java.net.URL;
+        import java.text.DateFormat;
+        import java.util.Date;
+        import java.util.Locale;
 
-public class funcoes {
+public class Function {
+
+
+
     private static final String OPEN_WEATHER_MAP_URL =
             "http://api.openweathermap.org/data/2.5/weather?lat=%s&lon=%s&units=metric";
 
-    private static final String OPEN_WEATHER_MAP_API = "====== YOUR OPEN WEATHER  API and GET API FROM THIS WEBSITE :-openweathermap.org ======";
+    private static final String OPEN_WEATHER_MAP_API = "907593487fe59ba68600a12ca74de20f";
 
     public static String setWeatherIcon(int actualId, long sunrise, long sunset){
         int id = actualId / 100;
@@ -69,7 +69,7 @@ public class funcoes {
         public AsyncResponse delegate = null;//Call back interface
 
         public placeIdTask(AsyncResponse asyncResponse) {
-            delegate = asyncResponse;//Assigning call back interfacethrough constructor
+            delegate = asyncResponse;
         }
 
         @Override
@@ -109,7 +109,6 @@ public class funcoes {
 
                 }
             } catch (JSONException e) {
-                //Log.e(LOG_TAG, "Cannot process JSON results", e);
             }
 
 
@@ -137,8 +136,6 @@ public class funcoes {
 
             JSONObject data = new JSONObject(json.toString());
 
-            // This value will be 404 if the request was not
-            // successful
             if(data.getInt("cod") != 200){
                 return null;
             }
@@ -148,5 +145,8 @@ public class funcoes {
             return null;
         }
     }
+
+
+
 
 }
