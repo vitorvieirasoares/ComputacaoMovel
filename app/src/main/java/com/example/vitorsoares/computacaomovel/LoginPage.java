@@ -33,7 +33,7 @@ public class LoginPage extends Activity {
                 String password = helper.searchPass(str);
 
                 if (pass.equals(password)) {
-                    Intent i = new Intent(LoginPage.this, MainActivity.class);
+                    Intent i = new Intent(LoginPage.this, Weather.class);
                     i.putExtra("Username", str);
                     startActivity(i);
                 }
