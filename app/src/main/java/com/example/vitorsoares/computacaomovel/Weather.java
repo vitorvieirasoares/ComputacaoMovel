@@ -10,8 +10,6 @@ package com.example.vitorsoares.computacaomovel;
 public class Weather extends AppCompatActivity {
 
 
-
-
     TextView cityField, detailsField, currentTemperatureField, humidity_field, pressure_field, weatherIcon, updatedField;
 
     Typeface weatherFont;
@@ -48,7 +46,7 @@ public class Weather extends AppCompatActivity {
 
             }
         });
-        asyncTask.execute("25.180000", "89.530000");
+        asyncTask.execute("41.160508", "-8.628953");
 
 
 

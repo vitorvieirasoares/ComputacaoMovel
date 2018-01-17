@@ -6,6 +6,7 @@ import android.provider.ContactsContract;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class Register extends Activity {
 
@@ -36,7 +37,9 @@ public class Register extends Activity {
 
                 helper.insertContact(c);
 
+                Toast.makeText(Register.this, "Registration Succesfull!", Toast.LENGTH_SHORT).show();
                 Register.super.onBackPressed();
+
             }
         });
     }
