@@ -38,7 +38,7 @@ public class LoginPage extends Activity {
                     startActivity(i);
                 }
                 else {
-                    Toast temp = Toast.makeText(LoginPage.this, "Username and Password's don't match!!" , Toast.LENGTH_SHORT);
+                    Toast temp = Toast.makeText(LoginPage.this, "Username and Password's don't match!!" , Toast.LENGTH_LONG);
                 }
             }
         });

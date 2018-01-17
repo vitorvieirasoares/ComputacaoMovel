@@ -49,12 +49,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         db.insert(TABLE_NAME, null, values);
         db.close();
-        cursor.close();
     }
 
     public String searchPass(String username) {
         db = this.getReadableDatabase();
-        String query = "select * from" + TABLE_NAME;
+        String query = "select username, password from " + TABLE_NAME;
         Cursor cursor = db.rawQuery(query, null);
         String uname, passw;
         passw = "Not Found!";
@@ -69,7 +68,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             }
             while (cursor.moveToNext());
         }
-        cursor.close();
         return passw;
     }
 

@@ -35,6 +35,8 @@ public class Register extends Activity {
                 c.setPassword(passwordstr);
 
                 helper.insertContact(c);
+
+                Register.super.onBackPressed();
             }
         });
     }
